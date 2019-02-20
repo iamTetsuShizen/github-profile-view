@@ -1,0 +1,16 @@
+$body-color: #E2CFEA;
+$color-primary: #6247AA;
+$color-primary-light: #A06CD5;
+$color-secondary: #102B3F;
+$color-tertiary: #062726;
+
+
+body {
+  background-color: $body-color;
+  color: $color-primary;
+  text-align: center;
+}
+
+p {
+  color: $color-primary-light;
+}
