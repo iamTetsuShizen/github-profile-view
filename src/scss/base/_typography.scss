@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-form__input-text {
+    @include placeholders-typo;
+}
+
+.search-form__search-button {
+    @include placeholders-typo;
+    font-weight: bold;
+}

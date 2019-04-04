@@ -1,16 +1,14 @@
-$body-color: #E2CFEA;
-$color-primary: #6247AA;
-$color-primary-light: #A06CD5;
-$color-secondary: #102B3F;
-$color-tertiary: #062726;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
+@import "base/base";
+@import "base/helpers";
+@import "base/typography";
 
-body {
-  background-color: $body-color;
-  color: $color-primary;
-  text-align: center;
-}
+@import "components/form";
+@import "components/result";
 
-p {
-  color: $color-primary-light;
-}
+@import "pages/app";
+
+@import "themes/main-theme";
