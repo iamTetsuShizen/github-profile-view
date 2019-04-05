@@ -84,21 +84,18 @@
     &__numbers {
         width: 50%;
 
-        display: flex;
-        align-items: center;
+        @include flex-vertical-center;
 
         justify-content: flex-end;
     }
 
     &__stars {
-        display: flex;
-        align-items: center;
+        @include flex-vertical-center;
         margin: 0 .3rem;
 
     }
     &__fork {
-        display: flex;
-        align-items: center;
+        @include flex-vertical-center;
         margin: 0 .3rem;
     }
 }

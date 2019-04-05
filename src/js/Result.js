@@ -1,5 +1,3 @@
-import DOMElements from './helpers/DOMElements';
-
 export default class Result {
     constructor(result){
         this.data = result;
@@ -53,22 +51,6 @@ export default class Result {
         return html;
     }
 
-    /*
-            let html = '';
-        html += `<div class="repositories">
-        <h3>Repositories</h3>
-        <hr>
-        <div class=""
-        `;
-        repositoriesArray.forEach(repository => {
-            html += this.renderRepo(repository);
-        });
-        html += '</div>';
-
-        return html;
-    
-    */
-
     async getRepos() {
         let html = '';
         let url = `https://api.github.com/users/${this.data.login}/repos`;
@@ -76,10 +58,10 @@ export default class Result {
         try{
         const response = await fetch(url);
         const data =  await response.json();
-            console.log(data);
+
         return data;
+
         } catch(error) {
-            console.log(error);
             alert('Something went wrong! Try again later!');
         }
 

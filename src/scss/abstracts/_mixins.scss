@@ -10,3 +10,8 @@
 @mixin button-padding {
     padding: 6px 12px;
 }
+
+@mixin flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
