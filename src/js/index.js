@@ -1,7 +1,6 @@
 import '../scss/index.scss';
 
-import App from './App';
+import Form from './Form';
 
-const app = new App();
-
-app.init();
+let form = new Form();
+form.setupEventListeners();

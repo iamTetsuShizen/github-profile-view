@@ -1,33 +1,39 @@
 import DOMElements from './helpers/DOMElements';
 
-class Form {
+import Error from './Error';
+import Result from './Result';
+
+export default class Form {
     constructor() {}
 
     setupEventListeners() {
         DOMElements.searchFormSubmitButton.addEventListener('click', () => {
             let formValue = DOMElements.searchFormInput.value;
-            let data = this.getUsernameInfo(formValue);
-            console.log(data);
+            this.getData(formValue);
         });
     }
 
-    getUsernameInfo(username) {
+    getData(username) {
         let url = `https://api.github.com/users/${username}`;
-        let data = this.fetchData(url);
-        console.log(data);
-        return data;
-    }
 
-    fetchData(url) {
         fetch(url)
             .then(response => response.json())
-            .then(output => {
-                console.log(output); // si faig return del JSON, el perdo, REFACTOR TIME!!
-                return output; 
+            .then(output => { 
+                DOMElements.resultContainer.innerHTML = "";    
+                if(output.message){
+                    let searchError = new Error(output.message);
+                    DOMElements.resultContainer.innerHTML = searchError.render();
+
+                } else {
+                    let userInfoResult = new Result(output);
+                    DOMElements.resultContainer.innerHTML = userInfoResult.renderProfile();
+                    userInfoResult.getRepos()
+                    .then(data =>DOMElements.resultContainer.innerHTML += userInfoResult.renderRepos(data));
+ 
+                }
             })
             .catch(error => { throw error; });
     }
+        
 
 }
-
-export default Form;
