@@ -11,7 +11,7 @@ body {
     @include round-border;
     padding: 2rem;
     box-shadow: 10px 15px 20px 5px rgba($color-black, .4);
-    min-width: 400px;
+    width: 400px;
 }
 
 .search-container {
