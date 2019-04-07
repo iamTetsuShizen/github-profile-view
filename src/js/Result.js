@@ -1,4 +1,5 @@
 export default class Result {
+
     constructor(result){
         this.data = result;
     }
@@ -52,7 +53,6 @@ export default class Result {
     }
 
     async getRepos() {
-        let html = '';
         let url = `https://api.github.com/users/${this.data.login}/repos`;
 
         try{

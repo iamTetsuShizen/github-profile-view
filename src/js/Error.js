@@ -5,6 +5,5 @@ export default class Error {
 
     render() {
         return `<div class="result-error"><p>Error: ${this.message}</p></div>`;
-    }
-    
+    } 
 }

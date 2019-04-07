@@ -63,7 +63,7 @@
 
     &__list {
         max-height: 300px;
-        overflow: hidden;
+        overflow-y: auto;
     }
 }
 
