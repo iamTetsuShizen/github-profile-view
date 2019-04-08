@@ -1,7 +1,7 @@
-import DOMElements from './helpers/DOMElements';
+import DOMElements from '../helpers/DOMElements';
 
-import Error from './Error';
-import Result from './Result';
+import Error from '../Results/Error';
+import Result from '../Result';
 
 export default class Form {
     
@@ -12,10 +12,6 @@ export default class Form {
     setupEventListeners() {
         DOMElements.searchFormSubmitButton.addEventListener('click', () => {
             this.retrieveUser(DOMElements.searchFormInput.value);
-        });
-
-        document.addEventListener('keydown', ev => {
-            if(window.event && window.event.keyCode === 13) ev.preventDefault();
         });
     }
 
