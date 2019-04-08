@@ -4,7 +4,6 @@ export default class Repositories {
 
     constructor(repos) {
         this.repositoriesList = repos;
-        console.log(this.repositoriesList);
     }
 
     render() {
