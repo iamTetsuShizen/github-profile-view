@@ -1,7 +1,5 @@
-# marfeel-frontend-test
-A front-end project for Marfeel
-Anything you should know about this repo:
-- this is an exercise found in https://github.com/Marfeel/FrontendTest
+# github-profile-view
+A front-end project to practise api calls to the github API
 
 To start with this repo:
 
